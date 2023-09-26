@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style data="test" type="text/css"></style>
+    <link rel='stylesheet' href="css/style.min.css">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Chalk Board</title>
+</head>
+
+<body>
+    <canvas></canvas>
+    <div class="tools">
+        <h2>Tools</h2>
+        <h3>Brush tip</h3>
+        <div class='slidecontainer'>
+            <input type="range" min="1" max="50" value="25" class="slider" id="myRange"
+                onchange="getCurrentThickness(this.value)">
+        </div>
+        <h3>Color</h3>
+        <select onchange="getCurrentColor(this.value)">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+        </select>
+
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chalk.js"></script>
+</body>
+
+</html>
